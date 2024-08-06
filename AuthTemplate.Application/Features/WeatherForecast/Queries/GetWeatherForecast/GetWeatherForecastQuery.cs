@@ -8,7 +8,4 @@ using System.Threading.Tasks;
 
 namespace AuthTemplate.Application.Features.WeatherForecast.Queries.GetWeatherForecast;
 
-public class GetWeatherForecastQuery : IRequest<IEnumerable<Result<GetWeatherForecastResponse>>>
-{
-
-}
+public record GetWeatherForecastQuery(int Amount) : IRequest<Result<IEnumerable<GetWeatherForecastResponse>>>;
